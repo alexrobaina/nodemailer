@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   
     next();
   });
-  
+
 
 app.post('/api/form', (req, res) => {
 
@@ -49,11 +49,12 @@ app.post('/api/form', (req, res) => {
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
                 console.log('Error Occurs');
+                res.send('error');
             } else {
                 console.log('Email sent!!!!');
+                res.send('ok');
             } 
         });
-
 
     });
 
