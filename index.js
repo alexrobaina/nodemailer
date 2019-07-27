@@ -49,7 +49,7 @@ app.post('/api/form', (req, res) => {
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
                 console.log('Error Occurs');
-                res.send('error');
+                res.send('error hola mundo');
             } else {
                 console.log('Email sent!!!!');
                 res.send('ok');
