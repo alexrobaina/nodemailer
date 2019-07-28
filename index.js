@@ -55,10 +55,10 @@ app.post('/api/form', (req, res) => {
 
         let mailOptions = {
             from: 'info.guacamayos@gmail.com',
-            to: 'alexrobainaph@gmail.com',
+            to: 'lalimiramon@gmail.com',
             bcc: 'info.guacamayos@gmail.com',
             subject: 'Testing',
-            text: `OTRA ULTIMA PRUEBA`
+            text: `LO LOGREEEEEEEEEE mi amoooooooooor TE AMOOOOOOOO`
         }
         
         transporter.sendMail(mailOptions, function(err, data) {
