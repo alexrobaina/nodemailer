@@ -62,7 +62,7 @@ app.post('/api/form', (req, res) => {
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
                 console.log('Error Occurs');
-                res.send('error hola mundo 3');
+                res.send('error');
             } else {
                 console.log('Email sent!!!!');
                 res.send('ok');
@@ -75,5 +75,5 @@ app.post('/api/form', (req, res) => {
 const PORT = process.env.PORT || 3001
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`) 
+    console.log(`Server listening on port ${PORT}`)
 })
