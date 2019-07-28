@@ -38,9 +38,7 @@ app.post('/api/form', (req, res) => {
             auth: {
                 type: 'OAuth2',
                 user: 'info.guacamayos@gmail.com',
-                // refreshToken: '1/HrapCZx5UTOny59wacUh9q5xNEMqvRrnukahB8OsWi6CoYX9vMiG45Fq2dXSxun9',
                 accessToken: 'ya29.GltTB1J-kE0Nhicql4Y2dLag9Hpqa7cChZILGZ7g0ZoorNiJUkZ7TzBitSGEJML2c9BmHKiYHXuWBkzeA6seKieB0A3wz4JW4GiUTRrWoIYMoDQ9WJJO8sYZqHw-',
-                // expires: 3600,
             }
         });
 
@@ -55,10 +53,20 @@ app.post('/api/form', (req, res) => {
 
         let mailOptions = {
             from: 'info.guacamayos@gmail.com',
-            to: 'lalimiramon@gmail.com',
+            to: 'alexrobainaph@gmail.com',
             bcc: 'info.guacamayos@gmail.com',
             subject: 'Testing',
-            text: `LO LOGREEEEEEEEEE mi amoooooooooor TE AMOOOOOOOO`
+            text: `Hola Ale y Tati!
+            Soy ${req.body.name}, muchas gracias por la invitación. 
+            Quería confirmirarles mi asistencia a:
+            ${req.body.civil}
+            ${req.body.ceremonia}
+            ${req.body.fiesta}
+
+            Por cualquier cosa te puedes comunicar conmigo al siguiente email ${re.body.email}.
+
+            Muchas gracias.
+            `
         }
         
         transporter.sendMail(mailOptions, function(err, data) {
