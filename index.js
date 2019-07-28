@@ -62,11 +62,8 @@ app.post('/api/form', (req, res) => {
             ${req.body.civil}
             ${req.body.ceremonia}
             ${req.body.fiesta}
-
-            Por cualquier cosa te puedes comunicar conmigo al siguiente email ${re.body.email}.
-
-            Muchas gracias.
-            `
+            Por cualquier cosa te puedes comunicar conmigo al siguiente email ${req.body.email}.
+            Muchas gracias.`
         }
         
         transporter.sendMail(mailOptions, function(err, data) {
