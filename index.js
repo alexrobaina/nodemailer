@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 app.post('/api/form', (req, res) => {
 
         let transporter = nodemailer.createTransport({
-            service: 'gmail',
+            // service: 'gmail',
             // type: 'service_account',
             // clientId: '361223958674-qkls4qokro669qrv8nh4sfs8ch75ai6a.apps.googleusercontent.com',
             // clientSecret: 't_84TsL4cxE7CO7AfGasuxM3',
