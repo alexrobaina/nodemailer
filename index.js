@@ -58,12 +58,7 @@ app.post('/api/form', (req, res) => {
             subject: 'Testing',
             text: `Hola Ale y Tati!
             Soy ${req.body.name}, muchas gracias por la invitación. 
-            Quería confirmirarles mi asistencia a:
-            ${req.body.civil}
-            ${req.body.ceremonia}
-            ${req.body.fiesta}
-            Por cualquier cosa te puedes comunicar conmigo al siguiente email ${req.body.email}.
-            Muchas gracias.`
+            Quería confirmirarles mi asistencia a:`
         }
         
         transporter.sendMail(mailOptions, function(err, data) {
