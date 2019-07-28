@@ -38,13 +38,22 @@ app.post('/api/form', (req, res) => {
             auth: {
                 type: 'OAuth2',
                 user: 'info.guacamayos@gmail.com',
-                serviceClient: 'AIzaSyAISWRKNBPi5TcumRyh89hEb0Nlr8KZX0o',
-                privateKey: 'AIzaSyAISWRKNBPi5TcumRyh89hEb0Nlr8KZX0o',
-                accessToken: 'ya29.GltUB6HYV8z5ejFMYJjnLAMS7noOAHuXQ5GdQ2c7YgXF5fNKK787G1CJxma0ceH09BJyloFcDIrXYZiNBI3OQF2WMy9pPyFvKpF2anp75q-TOcCGM2BnVukP0udx',
-                expires: 3600   
+                clientId: '173556518215-qmvval55j45331dc28r9ceecsuuvf564.apps.googleusercontent.com',
+                clientSecret: 'qTDsJRMgIVwfmBetAgxy1NGk',
+                refreshToken: '1/cyTlWvtPqfNLRM2cNwNvjoKPsZEkZHXaYRWn-UDAgh8',
+                accessToken: 'ya29.GltUB_s3rImXwsE25Wg_shhRD5GmZ29kVUszpjHk4iZiEBmBUUU3GFunwiXcQ4E5P05tg2Z7IxsovIBswJ4YJ8w3QgwDWETLtYCcjfZKlnmaFEfYEDDXh3aalvqj',
+                expires: 1484314697598
             }
         });
 
+        transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+            let accessToken = userTokens[user];
+            if(!accessToken){
+                return callback(new Error('Unknown user'));
+            }else{
+                return callback(null, accessToken);
+            }
+        });
 
         let mailOptions = {
             from: 'info.guacamayos@gmail.com',
