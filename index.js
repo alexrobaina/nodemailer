@@ -38,12 +38,11 @@ app.post('/api/form', (req, res) => {
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
-
             auth: {
                 // user: process.env.EMAIL,
                 // pass: process.env.PASSWORD
                 type: 'OAuth2',
-                user: 'info.guacamayos@gmail.com.com',
+                user: 'info.guacamayos@gmail.com',
                 refreshToken: '1/HrapCZx5UTOny59wacUh9q5xNEMqvRrnukahB8OsWi6CoYX9vMiG45Fq2dXSxun9',
                 accessToken: 'ya29.GltTB4Lr3DInLbXvQFl_bOj_MF9wDjTP6-nNr6TLCw8PcXD62NVe11ezL8Dj3jgTXjecR1UlvITcJ5XVZVDTo-uuDV3kDLvZo8FjcAgUEiLWMQtK8NUnkhyivM2B',
                 expires: 3600,
