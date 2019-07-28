@@ -51,7 +51,7 @@ app.post('/api/form', (req, res) => {
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
                 console.log('Error Occurs');
-                res.send('error hola mundo');
+                res.send('error hola mundo' + data.messenge + ' ' + data.response);
             } else {
                 console.log('Email sent!!!!');
                 res.send('ok' + data.messenge + ' ' + data.response);
