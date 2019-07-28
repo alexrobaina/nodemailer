@@ -46,14 +46,6 @@ app.post('/api/form', (req, res) => {
             }
         });
 
-        transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
-            let accessToken = userTokens[user];
-            if(!accessToken){
-                return callback(new Error('Unknown user'));
-            }else{
-                return callback(null, accessToken);
-            }
-        });
 
         let mailOptions = {
             from: 'info.guacamayos@gmail.com',
