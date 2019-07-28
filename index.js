@@ -39,7 +39,7 @@ app.post('/api/form', (req, res) => {
                 type: 'OAuth2',
                 user: 'info.guacamayos@gmail.com',
                 serviceClient: 'AIzaSyAISWRKNBPi5TcumRyh89hEb0Nlr8KZX0o',
-                privateKey: '-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBg...',
+                privateKey: 'AIzaSyAISWRKNBPi5TcumRyh89hEb0Nlr8KZX0o',
                 accessToken: 'ya29.GltUB6HYV8z5ejFMYJjnLAMS7noOAHuXQ5GdQ2c7YgXF5fNKK787G1CJxma0ceH09BJyloFcDIrXYZiNBI3OQF2WMy9pPyFvKpF2anp75q-TOcCGM2BnVukP0udx',
                 expires: 3600   
             }
