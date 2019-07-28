@@ -32,6 +32,8 @@ app.post('/api/form', (req, res) => {
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
+            port: 467,
+            secure: true,
             auth: {
                 user: process.env.EMAIL,
                 pass: process.env.PASSWORD
@@ -52,7 +54,7 @@ app.post('/api/form', (req, res) => {
                 res.send('error hola mundo');
             } else {
                 console.log('Email sent!!!!');
-                res.send('ok');
+                res.send('ok' + data.messenge + ' ' + data.response);
             } 
         });
 
