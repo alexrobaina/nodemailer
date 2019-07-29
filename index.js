@@ -36,14 +36,14 @@ app.post('/api/form', (req, res) => {
             port: 465,
             secure: true,
             auth: {
-                type: 'OAuth2',
-                user: 'info.guacamayos@gmail.com',
-                clientId: '361223958674-3d07mbqfuhf44tp0b550244mtb8ctr3n.apps.googleusercontent.com',
-                clientSecret: 'JtThfUvmsr2cfA3Qpch_j4gg',
-                refreshToken: '1/fSiZS0RVCgxGV6Ct86w0KoOiIPmsdlnzXOOvB-8C6m8',
+                // type: 'OAuth2',
+                // user: 'info.guacamayos@gmail.com',
+                // clientId: '361223958674-3d07mbqfuhf44tp0b550244mtb8ctr3n.apps.googleusercontent.com',
+                // clientSecret: 'JtThfUvmsr2cfA3Qpch_j4gg',
+                // refreshToken: '1/fSiZS0RVCgxGV6Ct86w0KoOiIPmsdlnzXOOvB-8C6m8',
                 accessToken: 'ya29.GltUB8ThaFt7RAeMJDFgrZckvFFlEPMo6kvDiGqmFbhGxxmLO49Yk47V-8FCShPZjetHpfJnzInuhQyNGIWJIAfZn_hOvDHMtlQzn8W2bhLujpEQtWBs7GWqppGL',
-                expires: 3600
-                
+                // expires: 3600
+
             }
         });
 
