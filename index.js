@@ -51,7 +51,12 @@ app.post('/api/form', (req, res) => {
             to: 'lalimiramon@gmail.com',
             bcc: 'info.guacamayos@gmail.com',
             subject: 'Testing',
-            text: `Mensaje testing`
+            text: `Mensaje testing ${req.body.name}
+            ${req.body.email}
+            ${req.body.civil}
+            ${req.body.ceremonia}
+            ${req.body.fiesta}
+            `
         }
         
         transporter.sendMail(mailOptions, function(err, data) {
