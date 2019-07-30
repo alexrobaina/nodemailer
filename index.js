@@ -52,12 +52,12 @@ app.post('/api/form', (req, res) => {
             bcc: 'info.guacamayos@gmail.com',
             subject: 'Testing',
             text: `Hola Ale y Tati soy ${req.body.name},
-            te confirmo mi asistencia a:
-            ${req.body.civil}
-            ${req.body.ceremonia}
-            ${req.body.fiesta}
+te confirmo mi asistencia a:
+${req.body.civil}
+${req.body.ceremonia}
+${req.body.fiesta}
 
-            Cualquier otra info que necesite saber este es mi email ${req.body.email}
+Cualquier otra info que necesite saber este es mi email ${req.body.email}
             `
         }
 
