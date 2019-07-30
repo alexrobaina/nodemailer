@@ -46,6 +46,12 @@ app.post('/api/form', (req, res) => {
             }
         });
 
+        function confirmacion() {
+            if (req.body.civil === '') {
+                alert('hola mundo')
+            }
+         }
+
         let mailOptions = {
             from: 'info.guacamayos@gmail.com',
             to: 'lalimiramon@gmail.com',
@@ -63,11 +69,7 @@ Cualquier otra info que necesite saber este es mi email ${req.body.email}
     `
         }
 
- function confirmacion() {
-    if (req.body.civil === '') {
-        alert('hola mundo')
-    }
- }
+
 
         
         transporter.sendMail(mailOptions, function(err, data) {
