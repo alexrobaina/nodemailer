@@ -137,8 +137,7 @@ Cualquier otra info que necesite saber este es mi email ${req.body.email}
 `
             }
             return mailOptions;
-        } else {
-            else if (req.body.civil === '' && req.body.ceremonia === '' && req.body.fiesta === '') {
+        } else if (req.body.civil === '' && req.body.ceremonia === '' && req.body.fiesta === '') {
                 let mailOptions = {
                     from: 'info.guacamayos@gmail.com',
                     to: 'lalimiramon@gmail.com',
@@ -151,7 +150,8 @@ Cualquier otra info que necesite saber este es mi email ${req.body.email}`
                 }
                 return mailOptions;
             }
-        }
+        
+        
 
 
 
