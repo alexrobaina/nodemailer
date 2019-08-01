@@ -46,27 +46,111 @@ app.post('/api/form', (req, res) => {
             }
         });
 
-        function confirmacion() {
-            if (req.body.civil === '') {
-                alert('hola mundo')
-            }
-         }
-
-        let mailOptions = {
-            from: 'info.guacamayos@gmail.com',
-            to: 'lalimiramon@gmail.com',
-            bcc: 'info.guacamayos@gmail.com',
-            subject: 'Testing',
-            text: `Hola Ale y Tati soy ${req.body.name},
+        if (req.body.civil === 'civil' && req.body.ceremonia === '' && req.body.fiesta === '') {
+            let mailOptions = {
+                from: 'info.guacamayos@gmail.com',
+                to: 'lalimiramon@gmail.com',
+                bcc: 'info.guacamayos@gmail.com',
+                subject: 'Testing',
+                text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
 te confirmo mi asistencia a:
-
-${confirmacion()}
-${req.body.civil}
-${req.body.ceremonia}
-${req.body.fiesta}
-
+- ${req.body.civil}
+    
 Cualquier otra info que necesite saber este es mi email ${req.body.email}
-    `
+`
+            }
+            return mailOptions;
+        } else if (req.body.civil === '' && req.body.ceremonia === 'ceremonia' && req.body.fiesta === '') {
+            let mailOptions = {
+                from: 'info.guacamayos@gmail.com',
+                to: 'lalimiramon@gmail.com',
+                bcc: 'info.guacamayos@gmail.com',
+                subject: 'Testing',
+                text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
+te confirmo mi asistencia a:
+- ${req.body.ceremonia}
+    
+Cualquier otra info que necesite saber este es mi email ${req.body.email}
+`
+            }
+            return mailOptions;
+
+        } else if (req.body.civil === '' && req.body.ceremonia === '' && req.body.fiesta === 'fiesta') {
+            let mailOptions = {
+                from: 'info.guacamayos@gmail.com',
+                to: 'lalimiramon@gmail.com',
+                bcc: 'info.guacamayos@gmail.com',
+                subject: 'Testing',
+                text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
+te confirmo mi asistencia a:
+- ${req.body.fiesta}
+    
+Cualquier otra info que necesite saber este es mi email ${req.body.email}
+`
+            }
+            return mailOptions
+
+        } else if (req.body.civil === '' && req.body.ceremonia === 'ceremonia' && req.body.fiesta === 'fiesta') {
+            let mailOptions = {
+                from: 'info.guacamayos@gmail.com',
+                to: 'lalimiramon@gmail.com',
+                bcc: 'info.guacamayos@gmail.com',
+                subject: 'Testing',
+                text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
+te confirmo mi asistencia a:
+- ${req.body.ceremonia}
+- ${req.body.fiesta}
+    
+Cualquier otra info que necesite saber este es mi email ${req.body.email}
+`
+            }
+            return mailOptions;
+
+        } else if (req.body.civil === 'civil' && req.body.ceremonia === 'ceremonia' && req.body.fiesta === '') {
+            let mailOptions = {
+                from: 'info.guacamayos@gmail.com',
+                to: 'lalimiramon@gmail.com',
+                bcc: 'info.guacamayos@gmail.com',
+                subject: 'Testing',
+                text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
+te confirmo mi asistencia a:
+- ${req.body.civil}
+- ${req.body.ceremonia}
+    
+Cualquier otra info que necesite saber este es mi email ${req.body.email}
+`
+            }
+            return mailOptions;
+
+        } else if (req.body.civil === 'civil' && req.body.ceremonia === '' && req.body.fiesta === 'fiesta') {
+            let mailOptions = {
+                from: 'info.guacamayos@gmail.com',
+                to: 'lalimiramon@gmail.com',
+                bcc: 'info.guacamayos@gmail.com',
+                subject: 'Testing',
+                text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
+te confirmo mi asistencia a:
+- ${req.body.civil}
+- ${req.body.fiesta}
+    
+Cualquier otra info que necesite saber este es mi email ${req.body.email}
+`
+            }
+            return mailOptions;
+        } else {
+            else if (req.body.civil === '' && req.body.ceremonia === '' && req.body.fiesta === '') {
+                let mailOptions = {
+                    from: 'info.guacamayos@gmail.com',
+                    to: 'lalimiramon@gmail.com',
+                    bcc: 'info.guacamayos@gmail.com',
+                    subject: 'Testing',
+                    text: `Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
+no se si voy a ir. 
+        
+Cualquier otra info que necesite saber este es mi email ${req.body.email}`
+                }
+                return mailOptions;
+            }
         }
 
 
