@@ -51,13 +51,10 @@ app.post('/api/form', (req, res) => {
                 to: 'lalimiramon@gmail.com',
                 bcc: 'info.guacamayos@gmail.com',
                 subject: 'Testing',
-                html: `<p>Hola Ale y Tati gracias por la invitación mi nombre es ${req.body.name},
-te confirmo mi asistencia a:<p/>
-<p>- ${req.body.civil} - ${req.body.ceremonia} - ${req.body.fiesta}<p/>
-    
-<p>Cualquier otra info que necesite saber este es mi email ${req.body.email}<p/>
-`
+                html: '<p>Hola Ale y Tati gracias por la invitación mi nombre es ' + req.body.name + ', te confirmo mi asistencia a: ' + req.body.civil + ' ' + req.body.ceremonia + ' ' + req.body.fiesta + ' Cualquier otra info que necesite saber este es mi email ' + req.body.email
+
             }
+
 
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
