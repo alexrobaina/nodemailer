@@ -15,7 +15,7 @@ app.use((req, res, next) => {
       'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     );
   
-    
+
     // OPTIONS only happens when the browser sends POST or PUT
     if (req.method === 'OPTIONS') {
       res.header(
@@ -49,7 +49,7 @@ app.post('/api/form', (req, res) => {
 
             let mailOptions = {
                 from: 'info.guacamayos@gmail.com',
-                to: 'a.martinezto@hotmail.com',
+                to: 'alerobainaph@gmail.com',
                 bcc: 'info.guacamayos@gmail.com',
                 subject: 'Asistencia de invitados',
                 text: `Hola Ale y Tati, 
