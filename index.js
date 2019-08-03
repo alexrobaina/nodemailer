@@ -51,11 +51,22 @@ app.post('/api/form', (req, res) => {
                 to: 'lalimiramon@gmail.com',
                 bcc: 'info.guacamayos@gmail.com',
                 subject: 'Testing',
-                html: '<p>Hola Ale y Tati gracias por la invitación mi nombre es ' + req.body.name + ', te confirmo mi asistencia a: ' + req.body.civil + ' ' + req.body.ceremonia + ' ' + req.body.fiesta + ' Cualquier otra info que necesite saber este es mi email ' + req.body.email
+                text: `Hola Ale y Tati, 
+Gracias por la invitación! Soy ${req.body.name}.
+Les confirmo mi asistencia a:
+${req.body.civil}
+${req.body.ceremonia}
+${req.body.fiesta}
+    
+Para comunicarse me pueden escribir a ${req.body.email}
 
+Nos vemos en el casamiento!
+`
             }
 
 
+
+        
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
                 console.log('Error Occurs');
