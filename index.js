@@ -37,7 +37,7 @@ app.post('/api/form', (req, res) => {
             secure: true,
             auth: {
                 type: 'OAuth2',
-                user: process.env.USER,
+                user: 'info.guacamayos@gmail.com',
                 clientId: '361223958674-u33j40r18i6nh3ajdje7ao4epoup5buo.apps.googleusercontent.com',
                 clientSecret: 'qyFW5tUqlZWgIMGYOtl-iB4',
                 refreshToken: '1/zkHZgKOcPtKpejFVpWVGaFHYAaBAHJTjlpi-JzTYRkI',
@@ -64,9 +64,6 @@ Nos vemos en el casamiento!
 `
             }
 
-
-
-        
         transporter.sendMail(mailOptions, function(err, data) {
             if (err) {
                 console.log('Error Occurs');
