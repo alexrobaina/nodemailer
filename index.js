@@ -37,18 +37,18 @@ app.post('/api/form', (req, res) => {
             secure: true,
             auth: {
                 type: 'OAuth2',
-                user: 'info.guacamayos@gmail.com',
-                clientId: '361223958674-u33j40r18i6nh3ajdje7ao4epoup5buo.apps.googleusercontent.com',
-                clientSecret: 'jqyFW5tUqlZWgIMGYOtl-iB4',
-                refreshToken: '1/zkHZgKOcPtKpejFVpWVGaFHYAaBAHJTjlpi-JzTYRkI',
-                accessToken: 'ya29.GltVB3SL6-lKA2aDXstABfbmvoPzFnSqKE4qgqaKqIIay4VZoydcLC0ksHJESiWYYsyEP0vsFp0zsgcAMT79TkWHDHwiRB4juscL262f9-7_KiIpor6i-jT8OE7D',
+                user: process.env.USER,
+                clientId: process.env.CLIENT_ID,
+                clientSecret: process.env.CLIENT_SECRET,
+                refreshToken: process.env.REFRESH_TOKEN,
+                accessToken: process.env.ACCESS_TOKEN,
                 expires: 3600
             }
         });
 
             let mailOptions = {
                 from: 'info.guacamayos@gmail.com',
-                to: 'lalimiramon@gmail.com',
+                to: 'a.martinezto@hotmail.com',
                 bcc: 'info.guacamayos@gmail.com',
                 subject: 'Testing',
                 text: `Hola Ale y Tati, 
