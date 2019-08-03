@@ -15,7 +15,6 @@ app.use((req, res, next) => {
       'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     );
   
-
     // OPTIONS only happens when the browser sends POST or PUT
     if (req.method === 'OPTIONS') {
       res.header(
@@ -40,7 +39,7 @@ app.post('/api/form', (req, res) => {
                 type: 'OAuth2',
                 user: 'info.guacamayos@gmail.com',
                 clientId: '361223958674-u33j40r18i6nh3ajdje7ao4epoup5buo.apps.googleusercontent.com',
-                clientSecret: 'qyFW5tUqlZWgIMGYOtl-iB4',
+                clientSecret: 'jqyFW5tUqlZWgIMGYOtl-iB4',
                 refreshToken: '1/zkHZgKOcPtKpejFVpWVGaFHYAaBAHJTjlpi-JzTYRkI',
                 accessToken: 'ya29.GltVB3SL6-lKA2aDXstABfbmvoPzFnSqKE4qgqaKqIIay4VZoydcLC0ksHJESiWYYsyEP0vsFp0zsgcAMT79TkWHDHwiRB4juscL262f9-7_KiIpor6i-jT8OE7D',
                 expires: 3600
@@ -49,7 +48,7 @@ app.post('/api/form', (req, res) => {
 
             let mailOptions = {
                 from: 'info.guacamayos@gmail.com',
-                to: 'alerobainaph@gmail.com',
+                to: 'a.martinezto@hotmail.com',
                 bcc: 'info.guacamayos@gmail.com',
                 subject: 'Asistencia de invitados',
                 text: `Hola Ale y Tati, 
