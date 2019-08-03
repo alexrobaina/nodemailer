@@ -15,6 +15,7 @@ app.use((req, res, next) => {
       'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     );
   
+    
     // OPTIONS only happens when the browser sends POST or PUT
     if (req.method === 'OPTIONS') {
       res.header(
